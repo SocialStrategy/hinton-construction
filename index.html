@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hinton Construction Ltd — Christchurch's premium residential builder. Architectural new builds, renovations and alterations crafted with precision since 2013.">
+  <meta name="theme-color" content="#2B7CC1">
+  <title>Hinton Construction Ltd — Christchurch Builder</title>
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts: Share Tech, Montserrat, Poppins, JetBrains Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+  <!-- Skip to main content -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <nav id="mainNav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo" aria-label="Hinton Construction Ltd — home">
+        <img src="/images/logo.jpg" alt="Hinton Construction Ltd" width="140" height="44" loading="eager">
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
+    <section id="home" class="hero" aria-label="Hero">
+      <!-- Background layers -->
+      <div class="hero-bg" aria-hidden="true" style="background-image:url('/images/hero.jpg')"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <!-- Floating glows -->
+      <div class="hero-glow hero-glow--1" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--2" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <div class="hero-text fade-in">
+          <div class="eyebrow eyebrow--light">Christchurch &amp; Canterbury Region</div>
+          <h1>Building <em>exceptional</em><br>homes since 2013.</h1>
+          <p class="hero-sub">Architectural new builds, renovations and alterations — crafted with precision and care. We focus on quality, not quantity.</p>
+          <div class="hero-btns">
+            <a href="#contact" class="btn-primary">Get a Free Quote</a>
+            <a href="#gallery" class="btn-ghost">View Our Work</a>
+          </div>
+        </div>
+
+        <div class="hero-badge-wrap fade-in fade-in--delay-3" aria-hidden="true">
+          <div class="hero-badge">
+            <div class="badge-num font-mono" data-count="13" data-suffix="+">0</div>
+            <div class="badge-label">Years in<br>Canterbury</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="hero-scroll" aria-label="Scroll to content">
+        <div class="scroll-indicator">
+          <div class="scroll-line"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         METRICS STRIP
+    ═══════════════════════════════════════ -->
+    <div class="metrics-strip" aria-label="Key facts">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric fade-in">
+            <div class="metric-value font-mono" data-count="13" data-suffix="+">13+</div>
+            <div class="metric-label">Years in Canterbury</div>
+          </div>
+          <div class="metric-divider" aria-hidden="true"></div>
+          <div class="metric fade-in fade-in--delay-1">
+            <div class="metric-value font-mono" data-prefix="Est. ">2013</div>
+            <div class="metric-label">Canterbury Based</div>
+          </div>
+          <div class="metric-divider" aria-hidden="true"></div>
+          <div class="metric fade-in fade-in--delay-2">
+            <div class="metric-value font-mono" data-count="100" data-suffix="%">100%</div>
+            <div class="metric-label">Quality Focused</div>
+          </div>
+          <div class="metric-divider" aria-hidden="true"></div>
+          <div class="metric fade-in fade-in--delay-3">
+            <div class="metric-value metric-value--text">Free</div>
+            <div class="metric-label">Initial Consultation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════ -->
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="about-img-wrap fade-in">
+          <img src="/images/services.jpg" alt="Hinton Construction team at work on site" width="560" height="660" loading="lazy">
+          <div class="about-caption">
+            <strong>2013</strong>
+            Established in Canterbury
+          </div>
+        </div>
+
+        <div class="about-content fade-in fade-in--delay-1">
+          <div class="eyebrow">About Us</div>
+          <h2>Small team.<br><em>Big attention</em> to detail.</h2>
+          <p>Hinton Construction Limited is a small, owner-operated residential construction company based in Christchurch. We specialise in architectural new builds, renovations, and alterations — and we work closely with homeowners who value craftsmanship over shortcuts.</p>
+          <p>We deliberately take on fewer projects so we can give each one the focus it deserves. When you build with Hinton, you're dealing directly with us from day one to CCC.</p>
+          <div class="pill-group">
+            <span class="pill">Architectural New Builds</span>
+            <span class="pill">Renovations</span>
+            <span class="pill">Alterations</span>
+            <span class="pill">Residential Developments</span>
+            <span class="pill">Canterbury Region</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SERVICES
+    ═══════════════════════════════════════ -->
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="eyebrow">What We Do</div>
+          <h2>Our <em>services</em></h2>
+          <p>From concept to completion, we manage all aspects of your residential project across the Canterbury region.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Architectural New Builds -->
+          <article class="service-card fade-in">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 28V14L16 4l12 10v14H4z"/>
+                <path d="M12 28v-9h8v9"/>
+                <line x1="4" y1="14" x2="28" y2="14"/>
+                <line x1="16" y1="4" x2="16" y2="28"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Architectural New Builds</h3>
+            <p class="service-desc">We bring your architectural plans to life with precision and care, delivering a home built to last and built to your vision.</p>
+          </article>
+
+          <!-- Home Renovations -->
+          <article class="service-card fade-in fade-in--delay-1">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="10" width="26" height="18" rx="2"/>
+                <path d="M10 10V7a6 6 0 0 1 12 0v3"/>
+                <line x1="16" y1="16" x2="16" y2="22"/>
+                <line x1="13" y1="19" x2="19" y2="19"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Home Renovations</h3>
+            <p class="service-desc">Kitchens, bathrooms, living spaces — we renovate with minimal disruption and maximum craftsmanship.</p>
+          </article>
+
+          <!-- Alterations & Additions -->
+          <article class="service-card fade-in fade-in--delay-2">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="12" height="12" rx="1"/>
+                <rect x="17" y="3" width="12" height="12" rx="1"/>
+                <rect x="3" y="17" width="12" height="12" rx="1"/>
+                <path d="M17 23h12M23 17v12"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Alterations &amp; Additions</h3>
+            <p class="service-desc">Structural alterations, extensions, and additions handled by experienced tradespeople who take pride in every detail.</p>
+          </article>
+
+          <!-- Residential Developments -->
+          <article class="service-card fade-in fade-in--delay-1">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 28V16L9 9l7 7 7-7 7 7v12H2z"/>
+                <path d="M9 28v-8h4v8M19 28v-8h4v8"/>
+                <line x1="2" y1="28" x2="30" y2="28"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Residential Developments</h3>
+            <p class="service-desc">Small-scale residential development projects managed from resource consent through to final CCC.</p>
+          </article>
+
+          <!-- Project Management -->
+          <article class="service-card fade-in fade-in--delay-2">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="4" y="4" width="24" height="28" rx="2"/>
+                <path d="M11 4V2M21 4V2"/>
+                <line x1="10" y1="14" x2="22" y2="14"/>
+                <line x1="10" y1="19" x2="18" y2="19"/>
+                <line x1="10" y1="24" x2="20" y2="24"/>
+                <circle cx="7" cy="14" r="1" fill="currentColor"/>
+                <circle cx="7" cy="19" r="1" fill="currentColor"/>
+                <circle cx="7" cy="24" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Project Management</h3>
+            <p class="service-desc">Full coordination of trades, suppliers, scheduling and compliance — so you don't have to manage anything.</p>
+          </article>
+
+          <!-- Free Consultation -->
+          <article class="service-card service-card--accent fade-in fade-in--delay-3">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M28 21a2 2 0 0 1-2 2H9l-5 5V7a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2z"/>
+                <line x1="10" y1="12" x2="22" y2="12"/>
+                <line x1="10" y1="17" x2="17" y2="17"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Free Consultation</h3>
+            <p class="service-desc">Not sure where to start? We offer a free, no-obligation initial consultation for all projects in the Canterbury region.</p>
+            <a href="#contact" class="service-cta">Book a chat →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         GALLERY
+    ═══════════════════════════════════════ -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="section-header-split fade-in">
+          <div>
+            <div class="eyebrow">Our Work</div>
+            <h2>Project <em>gallery</em></h2>
+          </div>
+          <a href="#contact" class="btn-outline">Start a project →</a>
+        </div>
+
+        <div class="gallery-grid fade-in" role="list" aria-label="Project gallery">
+          <button class="gi gi-1" data-src="/images/process.jpg" data-caption="Structural framing stage, Halswell new build — engineered timber portal and steel moment frame" role="listitem" aria-label="View project photo">
+            <img src="/images/process.jpg" alt="New build structural framing, Halswell" width="760" height="500" loading="lazy">
+            <div class="gi-overlay" aria-hidden="true">
+              <span class="gi-caption">Structural framing — Halswell new build</span>
+              <span class="gi-zoom">⊕</span>
+            </div>
+          </button>
+
+          <button class="gi gi-2" data-src="/images/gallery1.jpg" data-caption="Bespoke kitchen renovation, Fendalton — stone benchtops, custom cabinetry and integrated appliances" role="listitem" aria-label="View project photo">
+            <img src="/images/gallery1.jpg" alt="Kitchen renovation, Fendalton" width="380" height="280" loading="lazy">
+            <div class="gi-overlay" aria-hidden="true">
+              <span class="gi-caption">Kitchen renovation — Fendalton</span>
+              <span class="gi-zoom">⊕</span>
+            </div>
+          </button>
+
+          <button class="gi gi-3" data-src="/images/gallery2.jpg" data-caption="Master ensuite suite, Merivale — floor-to-ceiling porcelain tiling, heated floors and frameless shower" role="listitem" aria-label="View project photo">
+            <img src="/images/gallery2.jpg" alt="Master ensuite renovation, Merivale" width="380" height="280" loading="lazy">
+            <div class="gi-overlay" aria-hidden="true">
+              <span class="gi-caption">Master ensuite — Merivale</span>
+              <span class="gi-zoom">⊕</span>
+            </div>
+          </button>
+
+          <button class="gi gi-4" data-src="/images/gallery3.jpg" data-caption="Architectural new build, Rolleston — custom cedar and zinc cladding with passive solar design" role="listitem" aria-label="View project photo">
+            <img src="/images/gallery3.jpg" alt="Architectural new build, Rolleston" width="380" height="500" loading="lazy">
+            <div class="gi-overlay" aria-hidden="true">
+              <span class="gi-caption">Architectural new build — Rolleston</span>
+              <span class="gi-zoom">⊕</span>
+            </div>
+          </button>
+
+          <button class="gi gi-5" data-src="/images/gallery4.jpg" data-caption="Living extension and outdoor deck, Sumner — cedar batten screen, glazed corner and louvred pergola" role="listitem" aria-label="View project photo">
+            <img src="/images/gallery4.jpg" alt="Living extension and deck, Sumner" width="380" height="240" loading="lazy">
+            <div class="gi-overlay" aria-hidden="true">
+              <span class="gi-caption">Living extension — Sumner</span>
+              <span class="gi-zoom">⊕</span>
+            </div>
+          </button>
+
+          <button class="gi gi-6" data-src="/images/gallery5.jpg" data-caption="Courtyard addition, Cashmere — natural schist stone walls, landscaping and louvred timber pergola" role="listitem" aria-label="View project photo">
+            <img src="/images/gallery5.jpg" alt="Courtyard addition, Cashmere" width="380" height="240" loading="lazy">
+            <div class="gi-overlay" aria-hidden="true">
+              <span class="gi-caption">Courtyard addition — Cashmere</span>
+              <span class="gi-zoom">⊕</span>
+            </div>
+          </button>
+        </div>
+
+        <p class="gallery-note fade-in">Project images shown. Each caption reflects actual scope and location of work.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         PROCESS
+    ═══════════════════════════════════════ -->
+    <section id="process" class="section section-alt">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="eyebrow">How We Work</div>
+          <h2>A great <em>journey</em> to<br>an exceptional home</h2>
+          <p>We take our clients on a clear, collaborative process from first conversation to final handover.</p>
+        </div>
+
+        <div class="process-timeline fade-in" role="list">
+          <article class="process-step" role="listitem">
+            <div class="step-connector" aria-hidden="true"></div>
+            <div class="step-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <div class="step-num font-mono" aria-hidden="true">01</div>
+            <h3 class="step-title">Free Consultation</h3>
+            <p class="step-desc">We meet, discuss your project, and give you an honest assessment — no obligation, no sales pitch.</p>
+          </article>
+
+          <article class="process-step" role="listitem">
+            <div class="step-connector" aria-hidden="true"></div>
+            <div class="step-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <div class="step-num font-mono" aria-hidden="true">02</div>
+            <h3 class="step-title">Scope &amp; Quote</h3>
+            <p class="step-desc">We work through your plans and put together a detailed, transparent quote with no hidden surprises.</p>
+          </article>
+
+          <article class="process-step" role="listitem">
+            <div class="step-connector" aria-hidden="true"></div>
+            <div class="step-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+                <path d="M7 8l3 3 5-5"/>
+              </svg>
+            </div>
+            <div class="step-num font-mono" aria-hidden="true">03</div>
+            <h3 class="step-title">Build</h3>
+            <p class="step-desc">We manage every aspect of the build — trades, compliance, scheduling — with regular updates throughout.</p>
+          </article>
+
+          <article class="process-step" role="listitem">
+            <div class="step-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <div class="step-num font-mono" aria-hidden="true">04</div>
+            <h3 class="step-title">Handover</h3>
+            <p class="step-desc">Your completed home, on time and to standard — with CCC and full documentation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         WHY US
+    ═══════════════════════════════════════ -->
+    <section id="why" class="section">
+      <div class="container why-grid">
+        <div class="why-content fade-in">
+          <div class="eyebrow">Why Hinton</div>
+          <h2>Quality, not <em>quantity.</em></h2>
+          <p>We're deliberately small. That means every project gets our full attention — not a site foreman you've never met.</p>
+
+          <div class="why-list">
+            <div class="why-item">
+              <div class="why-num font-mono" aria-hidden="true">01</div>
+              <div class="why-text">
+                <strong>Canterbury based since 2013</strong>
+                <span>Over a decade of residential building in Christchurch and the wider Canterbury region.</span>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-num font-mono" aria-hidden="true">02</div>
+              <div class="why-text">
+                <strong>Architectural specialists</strong>
+                <span>We work with complex, design-led plans that require real skill, experience and attention to detail.</span>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-num font-mono" aria-hidden="true">03</div>
+              <div class="why-text">
+                <strong>Direct communication</strong>
+                <span>You deal with us directly throughout — no account managers, no being passed around.</span>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-num font-mono" aria-hidden="true">04</div>
+              <div class="why-text">
+                <strong>Fewer projects, more focus</strong>
+                <span>We take on what we can do properly. Your build won't compete with twenty others for our time.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-image fade-in fade-in--delay-1">
+          <img src="/images/contact.jpg" alt="Hinton Construction — craftsmanship detail" width="520" height="600" loading="lazy">
+          <div class="why-quote-box">
+            <blockquote>
+              <p>"Focusing purely on quality, not quantity."</p>
+              <cite>— Hinton Construction Ltd</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════ -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="eyebrow">Get In Touch</div>
+          <h2>Let's talk about <em>your project</em></h2>
+          <p>Ready to build or renovate? Get in touch and we'll arrange a free, no-obligation consultation.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info -->
+          <div class="contact-info fade-in">
+            <div class="ci-block">
+              <div class="ci-label">Email</div>
+              <div class="ci-value">
+                <a href="mailto:hintonconstruct@gmail.com">hintonconstruct@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="ci-block">
+              <div class="ci-label">Location</div>
+              <div class="ci-value">Christchurch / Canterbury,<br>New Zealand</div>
+            </div>
+
+            <div class="ci-block">
+              <div class="ci-label">Specialisations</div>
+              <div class="ci-value ci-tags">
+                <span>Architectural New Builds</span>
+                <span>Renovations</span>
+                <span>Alterations &amp; Additions</span>
+                <span>Residential Developments</span>
+              </div>
+            </div>
+
+            <div class="ci-block">
+              <div class="ci-label">Follow Us</div>
+              <div class="ci-value">
+                <a href="https://www.facebook.com/profile.php?id=100063915815867" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Hinton Construction on Facebook">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  Facebook
+                </a>
+                <a href="#" class="social-link" aria-label="Hinton Construction on Instagram">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                  Instagram
+                </a>
+              </div>
+            </div>
+
+            <!-- Trust badges -->
+            <div class="trust-badges">
+              <div class="trust-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Licensed Building Practitioner</span>
+              </div>
+              <div class="trust-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                <span>Master Builders Association</span>
+              </div>
+              <div class="trust-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+                <span>10-Year Structural Guarantee</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form fade-in fade-in--delay-1" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="firstName" name="firstName" placeholder="John" autocomplete="given-name" required>
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="lastName" name="lastName" placeholder="Smith" autocomplete="family-name" required>
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="required" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" autocomplete="email" required>
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+64 21 000 0000" autocomplete="tel">
+            </div>
+
+            <div class="form-group">
+              <label for="projectType">Project Type <span class="required" aria-hidden="true">*</span></label>
+              <div class="select-wrap">
+                <select id="projectType" name="projectType" required>
+                  <option value="">Select a service…</option>
+                  <option value="new-build">Architectural New Build</option>
+                  <option value="renovation">Home Renovation</option>
+                  <option value="alteration">Alteration / Extension</option>
+                  <option value="development">Residential Development</option>
+                  <option value="other">Other / Not Sure Yet</option>
+                </select>
+                <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell Us About Your Project <span class="required" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Brief description, location, timeframe, rough budget…" required></textarea>
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <span class="btn-text">Send Enquiry</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+
+            <div class="form-success" id="formSuccess" role="alert" aria-live="polite" hidden>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <p>Thanks — we'll be in touch shortly to arrange your free consultation.</p>
+            </div>
+          </form>
+        </div>
+
+        <!-- Map -->
+        <div class="map-section fade-in">
+          <div class="map-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Christchurch / Canterbury Region
+          </div>
+          <div id="map" aria-label="Map showing Canterbury region, New Zealand" role="img"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-top-inner">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo" aria-label="Hinton Construction Ltd — back to top">
+            <img src="/images/logo.jpg" alt="Hinton Construction Ltd" width="130" height="40" loading="lazy">
+          </a>
+          <p class="footer-tagline">Quality residential construction in Christchurch and the Canterbury region since 2013.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=100063915815867" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul role="list">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#process">Our Process</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul role="list">
+              <li><a href="#services">Architectural New Builds</a></li>
+              <li><a href="#services">Home Renovations</a></li>
+              <li><a href="#services">Alterations &amp; Additions</a></li>
+              <li><a href="#services">Residential Developments</a></li>
+              <li><a href="#services">Project Management</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul role="list">
+              <li>
+                <a href="mailto:hintonconstruct@gmail.com">hintonconstruct@gmail.com</a>
+              </li>
+              <li>Christchurch, Canterbury</li>
+              <li>New Zealand</li>
+              <li><a href="#contact" class="footer-cta-link">Free consultation →</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Trust Badges Row -->
+    <div class="footer-trust">
+      <div class="container footer-trust-inner">
+        <div class="footer-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div>
+            <span class="badge-name">Licensed Building Practitioner</span>
+            <span class="badge-sub">MBIE Registered</span>
+          </div>
+        </div>
+        <div class="footer-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          <div>
+            <span class="badge-name">Master Builders Association</span>
+            <span class="badge-sub">Member</span>
+          </div>
+        </div>
+        <div class="footer-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          <div>
+            <span class="badge-name">10-Year Structural Guarantee</span>
+            <span class="badge-sub">All new builds</span>
+          </div>
+        </div>
+        <div class="footer-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07C9.44 17.23 7.77 15.56 6.15 13.36a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 5.06 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L9.91 9.91a16 16 0 0 0 6.18 6.18l.41-.41a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div>
+            <span class="badge-name">Canterbury Based</span>
+            <span class="badge-sub">Est. 2013</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="footer-copy">© 2025 Hinton Construction Ltd. All rights reserved. Christchurch, New Zealand.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <span aria-hidden="true">·</span>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       LIGHTBOX
+  ═══════════════════════════════════════ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="" loading="eager">
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WLs=" crossorigin=""></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
