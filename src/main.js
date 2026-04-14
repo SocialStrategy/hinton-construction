@@ -22,9 +22,6 @@ const lbClose   = document.getElementById('lightboxClose');
 const lbPrev    = document.getElementById('lightboxPrev');
 const lbNext    = document.getElementById('lightboxNext');
 const lbBg      = document.getElementById('lightboxBackdrop');
-const form      = document.getElementById('contactForm');
-const submitBtn = document.getElementById('submitBtn');
-const formSuccess = document.getElementById('formSuccess');
 const heroBg    = document.querySelector('.hero-bg');
 
 /* ══════════════════════════════════════════════════════════════
@@ -260,82 +257,6 @@ function showLightboxImage(index) {
   if (lbCaption) lbCaption.textContent = item.caption;
 }
 
-/* ══════════════════════════════════════════════════════════════
-   CONTACT FORM VALIDATION
-══════════════════════════════════════════════════════════════ */
-function initForm() {
-  if (!form) return;
-
-  // Real-time validation on blur
-  form.querySelectorAll('input, select, textarea').forEach(field => {
-    field.addEventListener('blur', () => validateField(field));
-    field.addEventListener('input', () => {
-      if (field.classList.contains('is-invalid')) validateField(field);
-    });
-  });
-
-  form.addEventListener('submit', handleSubmit);
-}
-
-function validateField(field) {
-  const errorEl = field.closest('.form-group')?.querySelector('.form-error');
-  let message = '';
-
-  if (field.required && !field.value.trim()) {
-    message = 'This field is required.';
-  } else if (field.type === 'email' && field.value && !isValidEmail(field.value)) {
-    message = 'Please enter a valid email address.';
-  } else if (field.type === 'tel' && field.value && !isValidPhone(field.value)) {
-    message = 'Please enter a valid phone number.';
-  }
-
-  field.classList.toggle('is-invalid', !!message);
-  if (errorEl) errorEl.textContent = message;
-  return !message;
-}
-
-function isValidEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-function isValidPhone(phone) {
-  return /^[\d\s\+\-\(\)]{7,20}$/.test(phone.trim());
-}
-
-function validateForm() {
-  const fields = form.querySelectorAll('input[required], select[required], textarea[required]');
-  let valid = true;
-  fields.forEach(field => {
-    if (!validateField(field)) valid = false;
-  });
-  return valid;
-}
-
-async function handleSubmit(e) {
-  e.preventDefault();
-
-  if (!validateForm()) {
-    // Focus first invalid field
-    form.querySelector('.is-invalid')?.focus();
-    return;
-  }
-
-  // Loading state
-  submitBtn.classList.add('is-loading');
-  submitBtn.disabled = true;
-
-  // Simulate submission (replace with real endpoint as needed)
-  await new Promise(resolve => setTimeout(resolve, 1400));
-
-  // Success state
-  submitBtn.classList.remove('is-loading');
-  form.style.display = 'none';
-  formSuccess.hidden = false;
-
-  // Collect form data (for actual integration)
-  const data = Object.fromEntries(new FormData(form));
-  console.info('[Hinton] Form submitted:', data);
-}
 
 /* ══════════════════════════════════════════════════════════════
    LEAFLET MAP
@@ -425,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initCounters();
   initLightbox();
-  initForm();
+
   initActiveNav();
 
   // Map initializes after Leaflet loads
